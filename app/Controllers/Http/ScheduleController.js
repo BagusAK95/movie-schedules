@@ -1,7 +1,7 @@
 "use strict";
 
-const Env = use('Env')
-const Host = "http://" + Env.get("HOST") + ":" + Env.get("PORT")
+const Env = use("Env")
+const Host = Env.get("ExternalHost")
 const rp = require("request-promise");
 const moment = require("moment")
 moment.locale("id");
