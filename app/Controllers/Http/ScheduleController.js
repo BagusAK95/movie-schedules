@@ -39,7 +39,7 @@ class ScheduleController {
       result.push({
         id: data.id,
         name: data.name,
-        poster: data.poster_image || Host + "/NotFound.png",
+        poster: data.poster_image || Host + "/img/NotFound.png",
         release: moment(data.release_date).format("DD MMMM YYYY"),
       });
     });
@@ -58,7 +58,7 @@ class ScheduleController {
       result.push({
         id: data.location_id,
         name: data.name,
-        cinema: Host + "/" + data.provider_name + ".png",
+        cinema: Host + "/img/" + data.provider_name + ".png",
         address: data.address,
       });
     });
@@ -78,7 +78,7 @@ class ScheduleController {
         data.schedules_list.forEach(schedules => {
           result.push({
             class: schedules.schedule_class,
-            image: Host + "/Showtimes.png",
+            image: Host + "/img/Showtimes.png",
             showtimes: schedules.schedules.map(e => e.showtime).join(' | ')
           })
         });
